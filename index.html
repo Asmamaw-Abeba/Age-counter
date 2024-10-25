@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Age counter</title>
+
+    <style>
+      body {
+        margin-top: 50px;
+      }
+
+      .io-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        row-gap: 20px;
+      }
+
+      .input-container,
+      .output-container {
+        display: flex;
+        column-gap: 5px;
+        justify-content: center;
+        align-items: center;
+      } 
+
+      input {
+        padding: 10px 10px;
+      }
+
+      button {
+        padding: 10px 18px;
+        background-color: aqua;
+      }
+
+      .input {
+        background-color: yellow;
+      }
+
+      .output {
+        background-color: blue;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="io-container">
+      <div class="input-container">
+        <div><input class="i-day input" type="text" placeholder="day"></div>
+        <div><input class="i-month input" type="text" placeholder="month"></div>
+        <div><input class="i-year input" type="text" placeholder="year"></div>
+      </div>
+  
+       <button>count</button>
+  
+       <div class="output-container">
+        <div><input class="o-day output" type="text" placeholder="day"></div>
+        <div><input class="o-month output" type="text" placeholder="month"></div>
+        <div><input class="o-year output" type="text" placeholder="year"></div>
+      </div>
+    </div>
+    
+
+
+    
+  </body>
+</html>
