@@ -3,44 +3,7 @@
   <head>
     <title>Age counter</title>
 
-    <style>
-      body {
-        margin-top: 50px;
-      }
-
-      .io-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        row-gap: 20px;
-      }
-
-      .input-container,
-      .output-container {
-        display: flex;
-        column-gap: 5px;
-        justify-content: center;
-        align-items: center;
-      } 
-
-      input {
-        padding: 10px 10px;
-      }
-
-      button {
-        padding: 10px 18px;
-        background-color: aqua;
-      }
-
-      .input {
-        background-color: yellow;
-      }
-
-      .output {
-        background-color: blue;
-      }
-    </style>
+    <link rel="stylesheet" href="age.css">
   </head>
 
   <body>
@@ -51,7 +14,7 @@
         <div><input class="i-year input" type="text" placeholder="year"></div>
       </div>
   
-       <button>count</button>
+       <button class="count-button">count</button>
   
        <div class="output-container">
         <div><input class="o-day output" type="text" placeholder="day"></div>
@@ -61,7 +24,10 @@
     </div>
     
 
+    <script languge="javascript" src="https://unpkg.com/dayjs@1.11.10/dayjs.min.js"></script>
+    <script src="age.js"></script>
 
+      
     
   </body>
 </html>

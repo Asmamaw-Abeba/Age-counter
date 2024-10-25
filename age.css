@@ -1,0 +1,58 @@
+body {
+  margin-top: 50px;
+}
+
+.io-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 20px;
+}
+
+.input-container,
+.output-container {
+  display: flex;
+  column-gap: 5px;
+  justify-content: center;
+  align-items: center;
+} 
+
+input {
+  padding: 20px 10px;
+}
+
+button {
+  border: none;
+  border-radius: 5px;
+  padding: 10px 18px;
+  background-color: rgb(0, 255, 157);
+
+  transition: opacity 1s;
+}
+
+button:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.input {
+  background-color: yellow;
+}
+
+.output-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 10px;
+}
+
+.output {
+  background-color: aqua;
+  
+}
+
+button:hover .output-container {
+  
+}
