@@ -52,7 +52,22 @@ function countAge() {
   inputYear.value = '';
 }
 
+function backPage() {
+  const backHTML = `
+    <a href="index.html">
+      <button class="count-button">Back</button>
+    </a>
+  `;
+
+  return backHTML;
+}
+
 document.querySelector('.count-button')
   .addEventListener('click', () => {
     countAge();
+    document.querySelector('.input-container').innerHTML = '';
+
+    document.querySelector('.count-button').innerText = 'Result';
+
+    document.querySelector('.back-button').innerHTML = backPage();
 });

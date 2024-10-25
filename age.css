@@ -3,7 +3,7 @@ body {
 }
 
 .io-container {
-  background-color: gray;
+  background-color: rgb(236, 234, 234);
   width: 300px;padding: 50px 10px;
   margin: 0 auto;
   border: none;
