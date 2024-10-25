@@ -23,8 +23,7 @@ const presentDay = Number(today.format('D'));
 console.log(presentDay);
 
 
-document.querySelector('.count-button')
-.addEventListener('click', () => {
+function countAge() {
 
   const bd = Number(inputDay.value); // born date
   const bm = Number(inputMonth.value); //born month
@@ -51,5 +50,9 @@ document.querySelector('.count-button')
   inputDay.value = '';
   inputMonth.value = '';
   inputYear.value = '';
+}
 
+document.querySelector('.count-button')
+  .addEventListener('click', () => {
+    countAge();
 });
