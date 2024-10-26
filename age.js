@@ -69,5 +69,7 @@ document.querySelector('.count-button')
 
     document.querySelector('.count-button').innerText = 'Result';
 
-    document.querySelector('.back-button').innerHTML = backPage();
+    document.querySelector('.calculate-button').innerHTML = backPage();
+
+    //document.querySelector('.calculate-button').innerHTML = '';
 });
