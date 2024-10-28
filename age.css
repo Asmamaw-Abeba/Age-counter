@@ -76,6 +76,16 @@ button:hover .output-container {
   
 }
 
+.input::placeholder {
+  
+}
+
 .feadback::placeholder {
   color: red;
+}
+
+.bound-feadback::placeholder {
+  color: red;
+  font-size: 6px;
+  white-space: wrap;
 }
