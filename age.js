@@ -33,23 +33,48 @@ function countAge() {
 
   if (bm > presentMonth) {
     remainderMonth = bm - presentMonth;
-    outputMonth.value = 12 - remainderMonth + ' monthes';
-    outputYear.value = yy - 1 + ' years old';
-    outputDay.value = bd + ' day';
+    setTimeout(() => {
+      outputDay.value = bd + ' day';
+    }, 1000);
+    setTimeout(() => {
+      outputMonth.value = 12 - remainderMonth + ' monthes';
+    }, 2000);
+    setTimeout(() => {
+      if (by === presentYear) {
+        outputYear.value = yy + ' years old';
+      } else {
+        outputYear.value = yy - 1 + ' years old';
+      }  
+    }, 3000);
+
   } else if (bm < presentMonth) {
-    outputMonth.value = presentMonth - bm + ' monthes';
-    outputYear.value = yy + ' years old';
-    outputDay.value = bd + ' day';
+    setTimeout(() => {
+      outputDay.value = bd + ' day';
+    }, 1000);
+    setTimeout(() => {
+      outputMonth.value = presentMonth - bm + ' monthes';
+    }, 2000);
+    setTimeout(() => {
+      outputYear.value = yy + ' years old'; 
+    }, 3000);
+
   } else {
-    outputMonth.value = presentMonth + ' monthes';
-    outputYear.value = yy + ' years old';
-    outputDay.value = bd + ' day';
+    setTimeout(() => {
+      outputDay.value = bd + ' day';
+    }, 1000);
+    setTimeout(() => {
+      outputMonth.value = presentMonth + ' monthes';
+    }, 2000);
+    setTimeout(() => {
+      outputYear.value = yy + ' years old';
+    }, 3000);
   }
 
   inputDay.value = '';
   inputMonth.value = '';
   inputYear.value = '';
 }
+
 
 function backPage() {
   const backHTML = `
