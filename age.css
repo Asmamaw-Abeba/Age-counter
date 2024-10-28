@@ -75,3 +75,7 @@ button:hover {
 button:hover .output-container {
   
 }
+
+.feadback::placeholder {
+  color: red;
+}

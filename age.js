@@ -24,7 +24,6 @@ console.log(presentDay);
 
 
 function countAge() {
-
   const bd = Number(inputDay.value); // born date
   const bm = Number(inputMonth.value); //born month
   const by = Number(inputYear.value); // born year
@@ -62,14 +61,31 @@ function backPage() {
   return backHTML;
 }
 
+
+function inputChecker() {
+  const data = document.querySelectorAll('.input');
+  data.forEach((eachInput, index) => {
+    eachInput.placeholder = 'x Please fill this place first';
+    eachInput.classList.add('feadback');
+  });
+}
+
+
 document.querySelector('.count-button')
   .addEventListener('click', () => {
-    countAge();
-    document.querySelector('.input-container').innerHTML = '';
 
-    document.querySelector('.count-button').innerText = 'Result';
-
-    document.querySelector('.calculate-button').innerHTML = backPage();
-
-    //document.querySelector('.calculate-button').innerHTML = '';
-});
+    if (inputDay.value === '' || inputMonth.value === '' || inputYear.value === '') {
+      console.log('please enter data');
+      inputChecker();
+    } else {
+      countAge();
+      document.querySelector('.input-container').innerHTML = '';
+  
+      document.querySelector('.count-button').innerText = 'Result';
+  
+      document.querySelector('.calculate-button').innerHTML = backPage();
+    }  
+  
+    
+    });
+   
