@@ -61,7 +61,7 @@ function backPage() {
 }
 
 
-function inputChecker() {
+function EmptyInputChecker() {
   const data = document.querySelectorAll('.input');
   data.forEach((eachInput, index) => {
     eachInput.placeholder = 'x Please fill this place first';
@@ -69,40 +69,44 @@ function inputChecker() {
   });
 }
 
+function inputValidation() {
+  if (inputDay.value === '' || inputMonth.value === '' || inputYear.value === '') {
+    EmptyInputChecker();
+  } else if (inputDay.value > 31 || inputDay.value <= 0) {
+    inputDay.value = '';
+    inputDay.placeholder = 'X please Enter day between 1 and 31';
+    inputDay.focus();
+    inputDay.classList.add('bound-feadback');
+  } else if(inputMonth.value > 12 || inputMonth.value <= 0) {
+    inputMonth.value = '';
+    inputMonth.placeholder = 'X please Enter month between 1 and 12';
+    inputMonth.focus();
+    inputMonth.classList.add('bound-feadback');
+  } else  if (inputYear.value > presentYear || inputYear.value <= 0) {
+    inputYear.value = '';
+    inputYear.placeholder = `X please Enter year between 1 and ${presentYear}`;
+    inputYear.focus();
+    inputYear.classList.add('bound-feadback');
+  } else {
+    countAge();
+    document.querySelector('.input-container').innerHTML = '';
+
+    document.querySelector('.count-button').innerText = 'Result';
+
+    document.querySelector('.calculate-button').innerHTML = backPage();
+  }  
+  
+  inputYear.classList.remove('bound-feadback');
+  inputMonth.classList.remove('bound-feadback');
+  inputDay.classList.remove('bound-feadback');
+} 
+
 
 document.querySelector('.count-button')
   .addEventListener('click', () => {
 
-    if (inputDay.value === '' || inputMonth.value === '' || inputYear.value === '') {
-      inputChecker();
-    } else if (inputDay.value > 31 || inputDay.value <= 0) {
-      inputDay.value = '';
-      inputDay.placeholder = 'X please Enter day between 1 and 31';
-      inputDay.focus();
-      inputDay.classList.add('bound-feadback');
-    } else if(inputMonth.value > 12 || inputMonth.value <= 0) {
-      inputMonth.value = '';
-      inputMonth.placeholder = 'X please Enter month between 1 and 12';
-      inputMonth.focus();
-      inputMonth.classList.add('bound-feadback');
-    } else  if (inputYear.value > presentYear || inputYear.value <= 0) {
-      inputYear.value = '';
-      inputYear.placeholder = `X please Enter year between 1 and ${presentYear}`;
-      inputYear.focus();
-      inputYear.classList.add('bound-feadback');
-    } else {
-      countAge();
-      document.querySelector('.input-container').innerHTML = '';
-  
-      document.querySelector('.count-button').innerText = 'Result';
-  
-      document.querySelector('.calculate-button').innerHTML = backPage();
-    }  
-    
-    inputYear.classList.remove('bound-feadback');
-    inputMonth.classList.remove('bound-feadback');
-    inputDay.classList.remove('bound-feadback');
-    
+    inputValidation();
+
     });
 
    
