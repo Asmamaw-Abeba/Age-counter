@@ -1,7 +1,7 @@
 body {
   
   width: 100%;
-  margin: 0;
+  margin-top: 30px;
   font-size: 24px;
   
 
@@ -24,6 +24,7 @@ body {
 }
 
 .age-title {
+  width: 80%;
   background-color: green;
   padding: 0 10px;
   border: none;
@@ -40,10 +41,11 @@ body {
 } 
 
 input {
-  padding: 20px 10px;
+  padding: 20px 300px;
 }
 
 button {
+  width: 20%;
   border: none;
   border-radius: 5px;
   padding: 10px 18px;
@@ -86,6 +88,11 @@ button:hover .output-container {
   font-size: 6px;
   white-space: wrap;
 }
+
+.cal-btn {
+  width: 70%;
+}
+
 
 /* Media query for smartphones */
 @media only screen and (max-width: 700px) {
