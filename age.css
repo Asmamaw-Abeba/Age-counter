@@ -25,9 +25,8 @@ body {
 
 .age-title {
   text-align: center;
-  width: 80%;
   background-color: green;
-  padding: 0 10px;
+  padding: 0px 250px;
   border: none;
   border-radius: 10px;
 }
@@ -79,6 +78,7 @@ button:hover .output-container {
 .input::placeholder,
 .output::placeholder {
   font-size: 20px;
+  
 }
 
 .feadback::placeholder {
