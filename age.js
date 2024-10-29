@@ -28,12 +28,12 @@ class CartClass { // use class to generate objects, now only one object
     document.querySelector('.count-button')
     .addEventListener('click', () => {
 
-    this.inputValidation();
+    this.#inputValidation();
 
     });
   }
 
-  countAge() {
+  #countAge() {
     const bd = Number(inputDay.value); // born date
     const bm = Number(inputMonth.value); //born month
     const by = Number(inputYear.value); // born year
@@ -85,7 +85,7 @@ class CartClass { // use class to generate objects, now only one object
     inputYear.value = '';
   }
 
-  EmptyInputChecker() {
+  #EmptyInputChecker() {
     const data = document.querySelectorAll('.input');
     data.forEach((eachInput, index) => {
       eachInput.placeholder = 'x Please fill this place first';
@@ -93,9 +93,9 @@ class CartClass { // use class to generate objects, now only one object
     });
   }
 
-  inputValidation() {
+  #inputValidation() {
     if (inputDay.value === '' || inputMonth.value === '' || inputYear.value === '') {
-      this.EmptyInputChecker();
+      this.#EmptyInputChecker();
     } else if (inputDay.value > 31 || inputDay.value <= 0) {
       inputDay.value = '';
       inputDay.placeholder = 'X please Enter day between 1 and 31';
@@ -112,12 +112,12 @@ class CartClass { // use class to generate objects, now only one object
       inputYear.focus();
       inputYear.classList.add('bound-feadback');
     } else {
-      this.countAge();
+      this.#countAge();
       document.querySelector('.input-container').innerHTML = '';
   
       document.querySelector('.count-button').innerText = 'Result';
   
-      document.querySelector('.calculate-button').innerHTML = this.backPage();
+      document.querySelector('.calculate-button').innerHTML = this.#backPage();
     }  
     
     inputYear.classList.remove('bound-feadback');
@@ -125,7 +125,7 @@ class CartClass { // use class to generate objects, now only one object
     inputDay.classList.remove('bound-feadback');
   }
 
-  backPage() {
+  #backPage() {
     const backHTML = `
       <a href="index.html">
         <button class="count-button">Back</button>
