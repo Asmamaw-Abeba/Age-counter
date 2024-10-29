@@ -83,7 +83,7 @@ button:hover .output-container {
 }
 
 /* Media query for smartphones */
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 500px) {
   .io-container {
       padding: 0 10px;
       width: 100%;
