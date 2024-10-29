@@ -23,6 +23,16 @@ const presentDay = Number(today.format('D'));
 console.log(presentDay);
 
 class CartClass { // use class to generate objects, now only one object
+
+  constructor() {
+    document.querySelector('.count-button')
+    .addEventListener('click', () => {
+
+    this.inputValidation();
+
+    });
+  }
+
   countAge() {
     const bd = Number(inputDay.value); // born date
     const bm = Number(inputMonth.value); //born month
@@ -124,15 +134,11 @@ class CartClass { // use class to generate objects, now only one object
     return backHTML;
   }
 }
+// create an instances of class
+const cartOop1 = new CartClass();
+//const cartOop2 = new CartClass();
 
-const cartOop = new CartClass();
 
 
-document.querySelector('.count-button')
-  .addEventListener('click', () => {
-
-    cartOop.inputValidation();
-
-    });
 
    
