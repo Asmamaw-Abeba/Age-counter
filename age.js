@@ -22,8 +22,7 @@ console.log(presentMonth);
 const presentDay = Number(today.format('D'));
 console.log(presentDay);
 
-
-const cartOop = {
+class CartClass { // use class to generate objects, now only one object
   countAge() {
     const bd = Number(inputDay.value); // born date
     const bm = Number(inputMonth.value); //born month
@@ -74,7 +73,7 @@ const cartOop = {
     inputDay.value = '';
     inputMonth.value = '';
     inputYear.value = '';
-  },
+  }
 
   EmptyInputChecker() {
     const data = document.querySelectorAll('.input');
@@ -82,7 +81,7 @@ const cartOop = {
       eachInput.placeholder = 'x Please fill this place first';
       eachInput.classList.add('feadback');
     });
-  },
+  }
 
   inputValidation() {
     if (inputDay.value === '' || inputMonth.value === '' || inputYear.value === '') {
@@ -114,8 +113,8 @@ const cartOop = {
     inputYear.classList.remove('bound-feadback');
     inputMonth.classList.remove('bound-feadback');
     inputDay.classList.remove('bound-feadback');
-  },
-  
+  }
+
   backPage() {
     const backHTML = `
       <a href="index.html">
@@ -124,8 +123,9 @@ const cartOop = {
     `;
     return backHTML;
   }
+}
 
-};
+const cartOop = new CartClass();
 
 
 document.querySelector('.count-button')
